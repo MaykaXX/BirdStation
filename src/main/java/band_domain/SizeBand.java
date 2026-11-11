@@ -5,7 +5,7 @@ public enum SizeBand {
     MEDIUM ("Среднее"),
     LARGE ("Большое");
 
-    private String title;
+    private final String title;
 
     SizeBand(String title){
         this.title = title;

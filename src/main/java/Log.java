@@ -3,8 +3,8 @@ public class Log {
 
     private Log(){}
 
-    public static void log(String sourse, String event){
+    public static void log(String source, String event){
         number++;
-        System.out.println("[" + sourse + "]" + ": " + event);
+        System.out.println("[" + source + "]" + ": " + event);
     }
 }
