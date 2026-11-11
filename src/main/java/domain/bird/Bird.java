@@ -1,4 +1,6 @@
-import band_domain.Band;
+package domain.bird;
+
+import domain.band.Band;
 
 
 public abstract class Bird {

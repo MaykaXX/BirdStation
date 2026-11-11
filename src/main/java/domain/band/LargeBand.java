@@ -1,4 +1,4 @@
-package band_domain;
+package domain.band;
 
 public record LargeBand(String id, RingingLocation location, CenterContact contact) implements Band {
     public LargeBand {

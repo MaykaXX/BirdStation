@@ -1,4 +1,4 @@
-package band_domain;
+package domain.band;
 
 public enum RingingLocation {
     KYIV("Киев", "Украинский центр кольцевания"),

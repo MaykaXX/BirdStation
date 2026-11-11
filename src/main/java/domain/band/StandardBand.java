@@ -1,4 +1,4 @@
-package band_domain;
+package domain.band;
 
 public record StandardBand(String id, RingingLocation location, SizeBand size) implements Band {
     public StandardBand {

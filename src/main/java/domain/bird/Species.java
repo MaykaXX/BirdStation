@@ -1,3 +1,5 @@
+package domain.bird;
+
 public enum Species {
     BARN_SWALLOW ("Деревенская ласточка"),
     EURASIAN_REED_WARBLER ("Тростниковая камышовка"),
@@ -22,6 +24,6 @@ public enum Species {
 
     @Override
     public String toString(){
-        return "[Species] " + this.title;
+        return "[domain.bird.Species] " + this.title;
     }
 }
