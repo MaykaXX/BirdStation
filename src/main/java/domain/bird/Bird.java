@@ -1,6 +1,7 @@
 package domain.bird;
 
 import domain.band.Band;
+import domain.band.SizeBand;
 
 
 public abstract class Bird {
@@ -9,6 +10,10 @@ public abstract class Bird {
 
     public Bird(Species species){
         this.species = species;
+    }
+
+    public SizeBand getRequiredBandSize() {
+        return species.getRequiredBandSize();
     }
 
     public boolean isBanded() {

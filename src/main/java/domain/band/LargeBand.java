@@ -12,4 +12,7 @@ public record LargeBand(String id, RingingLocation location, CenterContact conta
     public SizeBand size() {
         return SizeBand.LARGE;
     }
+
+
+
 }
