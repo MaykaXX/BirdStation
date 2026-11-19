@@ -2,6 +2,7 @@ package domain.bird;
 
 import domain.band.Band;
 import domain.band.SizeBand;
+import util.Log;
 
 
 public abstract class Bird {
@@ -22,9 +23,11 @@ public abstract class Bird {
 
     public void attachBand(Band band){
         if(isBanded()){
+            Log.log("Bird", "Птица уже окольцована");
             throw new IllegalStateException("Птица уже закольцована кольцом с ID: " + this.band.id());
         }
 
+        Log.log("Bird", "Кольцо успешно надето");
         this.band = band;
     }
 

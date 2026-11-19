@@ -1,3 +1,5 @@
 package domain.band;
 
-public record CenterContact(RingingLocation location, String email) {}
+public record CenterContact(RingingLocation location, String email) {
+
+}
