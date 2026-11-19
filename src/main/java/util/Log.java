@@ -1,12 +1,9 @@
 package util;
 
 public class Log {
-    private static long number;
+    private Log() {}
 
-    private Log(){}
-
-    public static void log(String source, String event){
-        number++;
-        System.out.println("[" + source + "]" + ": " + event);
+    public static void log(String source, String event) {
+        System.out.printf(source, event);
     }
 }
