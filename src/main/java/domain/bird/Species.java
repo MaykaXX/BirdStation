@@ -3,46 +3,46 @@ package domain.bird;
 import domain.band.SizeBand;
 
 public enum Species {
-    BARN_SWALLOW("Деревенская ласточка", SizeBand.SMALL),
-    EURASIAN_REED_WARBLER("Тростниковая камышовка", SizeBand.SMALL),
-    SEDGE_WARBLER("Камышовка-барсучок", SizeBand.SMALL),
-    COMMON_CHIFFCHAFF("Пеночка-теньковка", SizeBand.SMALL),
-    WILLOW_WARBLER("Пеночка-весничка", SizeBand.SMALL),
-    GREAT_TIT("Большая синица", SizeBand.SMALL),
-    EURASIAN_BLUE_TIT("Обыкновенная лазоревка", SizeBand.SMALL),
-    EUROPEAN_ROBIN("Зарянка", SizeBand.SMALL),
-    COMMON_BLACKBIRD("Черный дрозд", SizeBand.MEDIUM),
-    SONG_THRUSH("Певчий дрозд", SizeBand.MEDIUM),
-    EURASIAN_BLACKCAP("Черноголовая славка", SizeBand.SMALL),
-    COMMON_CHAFFINCH("Зяблик", SizeBand.SMALL),
-    EURASIAN_TREE_SPARROW("Полевой воробей", SizeBand.SMALL),
-    EUROPEAN_GOLDFINCH("Черноголовый щегол", SizeBand.SMALL),
-    WHITE_WAGTAIL("Белая трясогузка", SizeBand.SMALL),
-    EURASIAN_JAY("Сойка", SizeBand.MEDIUM),
-    GREAT_SPOTTED_WOODPECKER("Большой пестрый дятел", SizeBand.MEDIUM),
-    WHITE_STORK("Белый аист", SizeBand.LARGE),
-    COMMON_BUZZARD("Обыкновенный канюк", SizeBand.LARGE),
-    TAWNY_OWL("Серая неясыть", SizeBand.LARGE);
+    BARN_SWALLOW("Деревенская ласточка", BirdFamily.HIRUNDINIDAE, SizeBand.SMALL),
+    EURASIAN_REED_WARBLER("Тростниковая камышовка", BirdFamily.ACROCEPHALIDAE, SizeBand.SMALL),
+    SEDGE_WARBLER("Камышовка-барсучок", BirdFamily.ACROCEPHALIDAE, SizeBand.SMALL),
+    COMMON_CHIFFCHAFF("Пеночка-теньковка", BirdFamily.PHYLLOSCOPIDAE, SizeBand.SMALL),
+    WILLOW_WARBLER("Пеночка-весничка", BirdFamily.PHYLLOSCOPIDAE, SizeBand.SMALL),
+    GREAT_TIT("Большая синица", BirdFamily.PARIDAE, SizeBand.SMALL),
+    EURASIAN_BLUE_TIT("Обыкновенная лазоревка", BirdFamily.PARIDAE, SizeBand.SMALL),
+    EUROPEAN_ROBIN("Зарянка", BirdFamily.MUSCICAPIDAE, SizeBand.SMALL),
+    COMMON_BLACKBIRD("Черный дрозд", BirdFamily.TURDIDAE, SizeBand.MEDIUM),
+    SONG_THRUSH("Певчий дрозд", BirdFamily.TURDIDAE, SizeBand.MEDIUM),
+    EURASIAN_BLACKCAP("Черноголовая славка", BirdFamily.SYLVIIDAE, SizeBand.SMALL),
+    COMMON_CHAFFINCH("Зяблик", BirdFamily.FRINGILLIDAE, SizeBand.SMALL),
+    EURASIAN_TREE_SPARROW("Полевой воробей", BirdFamily.PASSERIDAE, SizeBand.SMALL),
+    EUROPEAN_GOLDFINCH("Черноголовый щегол", BirdFamily.FRINGILLIDAE, SizeBand.SMALL),
+    WHITE_WAGTAIL("Белая трясогузка", BirdFamily.MOTACILLIDAE, SizeBand.SMALL),
+    EURASIAN_JAY("Сойка", BirdFamily.CORVIDAE, SizeBand.MEDIUM),
+    GREAT_SPOTTED_WOODPECKER("Большой пестрый дятел", BirdFamily.PICIDAE, SizeBand.MEDIUM),
+    WHITE_STORK("Белый аист", BirdFamily.CICONIIDAE, SizeBand.LARGE),
+    COMMON_BUZZARD("Обыкновенный канюк", BirdFamily.ACCIPITRIDAE, SizeBand.LARGE),
+    TAWNY_OWL("Серая неясыть", BirdFamily.STRIGIDAE, SizeBand.LARGE);
 
-    private final String title;
+    private final String russianName;
+    private final BirdFamily family;
     private final SizeBand requiredBandSize;
 
-
-    Species(String title, SizeBand requiredBandSize){
-        this.title = title;
+    Species(String russianName, BirdFamily family, SizeBand requiredBandSize) {
+        this.russianName = russianName;
+        this.family = family;
         this.requiredBandSize = requiredBandSize;
     }
 
-    public String getTitle() {
-        return title;
+    public String getRussianName() {
+        return russianName;
+    }
+
+    public BirdFamily getFamily() {
+        return family;
     }
 
     public SizeBand getRequiredBandSize() {
         return requiredBandSize;
-    }
-
-    @Override
-    public String toString(){
-        return "[domain.bird.Species] " + this.title;
     }
 }
