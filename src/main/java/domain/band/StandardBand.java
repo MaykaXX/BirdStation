@@ -6,7 +6,6 @@ public record StandardBand(String id, RingingLocation location, SizeBand size) i
     public StandardBand {
         if (size == SizeBand.LARGE) {
             Log.log("StandardBand", "Отказ: размер кольца слишком большой");
-            throw new IllegalArgumentException("Для размера LARGE используйте класс LargeBand");
         }
     }
 }
